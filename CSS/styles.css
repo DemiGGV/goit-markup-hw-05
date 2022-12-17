@@ -33,7 +33,9 @@
 .customers .card-link:hover,
 .footer-socials .link:hover,
 .filter-button:hover,
-.protfolio .card-item:hover {
+.protfolio .card-item:hover,
+.close-window:hover,
+.close-window:focus {
     transition: 
     color 250ms cubic-bezier(var(--cubic)),
     background-color 250ms cubic-bezier(var(--cubic)),
@@ -370,7 +372,8 @@ body {
     border-radius: 4px;
 }
 
-.customers .icon {
+.customers .icon,
+.button .icon {
     fill: currentColor;
 }
 
@@ -443,6 +446,8 @@ body {
     background-color: var(--Success);
 }
 
+/* ----Modal window with back drop styles---- */
+
 .back-drop {
     position: fixed;
     top: 0;
@@ -450,6 +455,9 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(46, 47, 66, 0.4);
+
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(var(--cubic));
 }
 
 .back-drop.is-hidden {
@@ -459,8 +467,8 @@ body {
 
 .modal-window {
     position: absolute;
-    width: 408px;
-    height: 576px;
+    min-width: 408px;
+    min-height: 576px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -468,9 +476,7 @@ body {
     background: var(--Modal);
     border-radius: 4px;
 }
-.button .icon {
-    fill: currentColor;
-}
+
 .close-window {
     position: absolute;
     top: 24px;
@@ -485,6 +491,12 @@ body {
     background: var(--Accent);
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+.close-window:hover,
+.close-window:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 /*------------------- portfolio.html styles -------------------*/
 
 .protfolio {
@@ -575,7 +587,6 @@ body {
 .protfolio .card-item:hover .overlay,
 .protfolio .card-item:focus .overlay {
     transform: translateY(0%);
-    /* transition: transform 250ms cubic-bezier(var(--cubic)); */
 }
 
 .overlay {
