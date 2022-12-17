@@ -26,7 +26,7 @@
     margin: -1px;
 }
 
-.header .menu-link:hover,
+.page-header.menu-link:hover,
 .addr-mail:hover,
 .addr-tel:hover,
 .order-btn:hover,
@@ -90,7 +90,7 @@ body {
     padding-bottom: 24px;
 }
 
-.header {
+.page-header{
     background: #FFFFFF;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
     position: sticky;
@@ -102,7 +102,7 @@ body {
     margin: 0 auto;
 }
 
-.header>.container {
+.page-header>.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -151,7 +151,7 @@ body {
     margin-right: 40px;
 }
 
-/* .header  */
+/* .page-header */
 .menu-link {
     color: var(--Dark);
     font-weight: 600;
@@ -173,8 +173,8 @@ body {
     border-radius: 2px;
 }
 
-.header .menu-link:hover,
-.header .menu-link:focus {
+.page-header.menu-link:hover,
+.page-header.menu-link:focus {
     color: var(--primary-brand);
 }
 
