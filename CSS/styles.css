@@ -345,18 +345,13 @@ body {
     align-items: center;
     width: 40px;
     height: 40px;
-    color: var(--bgc-white);
+    color: var(--Light);
     background-color: var(--primary-brand);
     border-radius: 50%;
 }
 
 .card-content {
     padding: 32px 0;
-}
-/* ---icon color */
-
-.team .icon {
-    fill: var(--bgc-white);
 }
 
 /*------------------- Customers section styles */
@@ -373,7 +368,8 @@ body {
 }
 
 .customers .icon,
-.button .icon {
+.close-window .icon,
+.social-icon .icon {
     fill: currentColor;
 }
 
@@ -471,10 +467,18 @@ body {
     min-height: 576px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
 
     background: var(--Modal);
     border-radius: 4px;
+
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    transition: all 250ms cubic-bezier(var(--cubic));
+}
+
+.back-drop.is-hidden .modal-window {
+    transform: translate(-50%, -50%) scale(1.7);
+    opacity: 0;
 }
 
 .close-window {
@@ -486,8 +490,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     border-radius: 50%;
-    color:var(--icon);
+    color: var(--icon);
     background: var(--Accent);
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
