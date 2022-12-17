@@ -173,8 +173,8 @@ body {
     border-radius: 2px;
 }
 
-.page-header.menu-link:hover,
-.page-header.menu-link:focus {
+.page-header .menu-link:hover,
+.page-header .menu-link:focus {
     color: var(--primary-brand);
 }
 
